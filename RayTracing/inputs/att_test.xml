@@ -1,0 +1,68 @@
+<!--This scene demonstrates the effect of attenuation on objects as they move away from the light source-->
+<Scene>
+	<Material id=1>
+		<Ambient>1 1 1</Ambient>
+		<Diffuse>1 1 1</Diffuse>
+		<Specular>1 1 1 50</Specular>
+		<Reflectance>0.0 0.0 0.0</Reflectance>
+	</Material>
+	<Vertex id=1>
+		<Coordinates>-10 -10 -20</Coordinates>
+	</Vertex>
+	<Vertex id=2>
+		<Coordinates>10 10 -10</Coordinates>
+	</Vertex>
+	<Vertex id=3>
+		<Coordinates>-10 10 -5</Coordinates>
+	</Vertex>
+	<Vertex id=4>
+		<Coordinates>10 -10 0</Coordinates>
+	</Vertex>
+	<Vertex id=5>
+		<Coordinates>-35 5 -100</Coordinates>
+	</Vertex>
+	<Vertex id=6>
+		<Coordinates>-35 -25 -60</Coordinates>
+	</Vertex>
+	<Vertex id=7>
+		<Coordinates>15 5 -5</Coordinates>
+	</Vertex>
+	<Triangle id=1>
+		<Vertices>5 6 7</Vertices>
+		<MaterialId>1</MaterialId>
+	</Triangle>
+	<Sphere id=1>
+		<Center>1</Center>
+		<Radius>6</Radius>
+		<MaterialId>1</MaterialId>
+	</Sphere>
+	<Sphere id=2>
+		<Center>2</Center>
+		<Radius>6</Radius>
+		<MaterialId>1</MaterialId>
+	</Sphere>
+	<Sphere id=3>
+		<Center>3</Center>
+		<Radius>6</Radius>
+		<MaterialId>1</MaterialId>
+	</Sphere>
+	<Sphere id=4>
+		<Center>4</Center>
+		<Radius>6</Radius>
+		<MaterialId>1</MaterialId>
+	</Sphere>
+	<PointLight id=1>
+		<Position>0 0 18</Position>
+		<Intensity>900000 900000 900000</Intensity>
+	</PointLight>
+	<AmbientLight>12.5 12.5 12.5</AmbientLight>
+	<BackgroundColor>128 0 0 0</BackgroundColor>
+	<RayReflectionCount>2</RayReflectionCount>
+	<Camera id=1>
+		<Position>0 0 20</Position>
+		<Gaze>0 0 -1</Gaze>
+		<Up>0 1 0</Up>
+		<ImagePlane>-10 10 -10 10 12.5 512 512</ImagePlane>
+		<OutputName>att_test_1.ppm</OutputName>
+	</Camera>
+</Scene>

@@ -1,0 +1,112 @@
+<!--Simple test scene for reflection, involving 5 spheres-->
+<?xml version="1.0" encoding="windows-1252"?>
+<Scene>
+	<AmbientLight> 25 25 25 </AmbientLight>
+	<BackgroundColor> 0 0 0 </BackgroundColor>
+	<RayReflectionCount> 2 </RayReflectionCount>	
+	<Camera id="0">
+		<Position> 0 0 0 </Position>
+		<Gaze> 0 0 -1 </Gaze>
+		<Up> 0 1 0 </Up>
+		<ImagePlane> -1 1 -1 1 10  720 720 </ImagePlane>
+		<OutputName> spheres.ppm </OutputName>
+	</Camera>
+	<Material id="1">
+		<Ambient> 1 1 1 </Ambient>
+		<Diffuse> 1 1 1 </Diffuse>
+		<Specular> 1 1 1 100 </Specular>
+		<Reflectance> 0 0 0 </Reflectance>
+	</Material>	
+	<Material id="2">
+		<Ambient> 1 1 1 </Ambient>
+		<Diffuse> 1 0 0 </Diffuse>
+		<Specular> 1 1 1 100 </Specular>
+		<Reflectance> 1 1 1 </Reflectance>
+	</Material>	
+	<Material id="3">
+		<Ambient> 1 1 1 </Ambient>
+		<Diffuse> 0 1 0 </Diffuse>
+		<Specular> 1 1 1 100 </Specular>
+		<Reflectance> 0 0 0 </Reflectance>
+	</Material>	
+	<Material id="4">
+		<Ambient> 1 1 1 </Ambient>
+		<Diffuse> 0.2 0.2 0.2 </Diffuse>
+		<Specular> 0 0 0 1 </Specular>
+		<Reflectance> 1 1 1 </Reflectance>
+	</Material>	
+	<Material id="5">
+		<Ambient> 1 1 1 </Ambient>
+		<Diffuse> 0.1 0.9 0.9 </Diffuse>
+		<Specular> 0 0 0 1 </Specular>
+		<Reflectance> 0 0 0 </Reflectance>
+	</Material>	
+	<Vertex id="0">
+		<Coordinates> -10 -0.8 0 </Coordinates>
+	</Vertex>
+	<Vertex id="1">
+		<Coordinates> 10 -0.8 0 </Coordinates>
+	</Vertex>
+	<Vertex id="2">
+		<Coordinates> -10 -0.8 -100 </Coordinates>
+	</Vertex>
+	<Vertex id="3">
+		<Coordinates> 10 -0.8 -100 </Coordinates>
+	</Vertex>	
+	<Vertex id="4">
+		<Coordinates> 0 -0.2 -17 </Coordinates>
+	</Vertex>		
+	<Vertex id="5">
+		<Coordinates> 0.5 -0.5 -15 </Coordinates>
+	</Vertex>
+	<Vertex id="6">
+		<Coordinates> 1.0 -0.5 -16 </Coordinates>
+	</Vertex>
+	<Vertex id="7">
+		<Coordinates> -1.0 -0.5 -13 </Coordinates>
+	</Vertex>
+	<Vertex id="8">
+		<Coordinates> -0.8 -0.5 -12 </Coordinates>
+	</Vertex>
+	<Triangle id="0">
+		<Vertices> 0 1 2 </Vertices>
+		<MaterialId> 4 </MaterialId>
+	</Triangle>
+	<Triangle id="1">
+		<Vertices> 2 1 3 </Vertices>
+		<MaterialId> 4 </MaterialId>
+	</Triangle>
+	<Sphere id="0">
+		<Center> 4 </Center>
+		<Radius> 0.6 </Radius>
+		<MaterialId> 2 </MaterialId>
+	</Sphere>
+	<Sphere id="1">
+		<Center> 5 </Center>
+		<Radius> 0.3 </Radius>
+		<MaterialId> 5 </MaterialId>
+	</Sphere>
+	<Sphere id="2">
+		<Center> 6 </Center>
+		<Radius> 0.3 </Radius>
+		<MaterialId> 3 </MaterialId>
+	</Sphere>		
+	<Sphere id="3">
+		<Center> 7 </Center>
+		<Radius> 0.3 </Radius>
+		<MaterialId> 1 </MaterialId>
+	</Sphere>		
+	<Sphere id="4">
+		<Center> 8 </Center>
+		<Radius> 0.3 </Radius>
+		<MaterialId> 5 </MaterialId>
+	</Sphere>		
+	<PointLight id="0">
+		<Position> -4 4 -13  </Position>
+		<Intensity> 50000 50000 50000 </Intensity> 
+	</PointLight>
+	<PointLight id="1">
+		<Position> 4 4 -13  </Position>
+		<Intensity> 40000 40000 40000 </Intensity> 
+	</PointLight>
+</Scene>

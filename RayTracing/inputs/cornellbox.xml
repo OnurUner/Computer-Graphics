@@ -1,0 +1,155 @@
+<Scene>
+	<Material id=1>
+		<Ambient>1 1 1</Ambient>
+		<Diffuse>0.8 0.8 0.8</Diffuse>
+		<Specular>0 0 0 0</Specular>
+		<Reflectance>0.0 0.0 0.0</Reflectance>
+	</Material>
+	<Material id=2>
+		<Ambient>1 0 0</Ambient>
+		<Diffuse>1 0 0</Diffuse>
+		<Specular>0 0 0 0</Specular>
+		<Reflectance>0 0 0</Reflectance>
+	</Material>
+	<Material id=3>
+		<Ambient>0 0 1</Ambient>
+		<Diffuse>0 0 1</Diffuse>
+		<Specular>0 0 0 0</Specular>
+		<Reflectance>0 0 0</Reflectance>
+	</Material>
+	<Material id=4>
+		<Ambient>1 1 1</Ambient>
+		<Diffuse>0.8 0.8 0.8</Diffuse>
+		<Specular>0 0 0 0</Specular>
+		<Reflectance>0.0 0.0 0.0</Reflectance>
+	</Material>
+	<Material id=5>
+		<Ambient>1 1 1</Ambient>
+		<Diffuse>0 0 0</Diffuse>
+		<Specular>0 0 0 0</Specular>
+		<Reflectance>0.9 0.9 0.9</Reflectance>
+	</Material>
+	<Material id=6>
+		<Ambient>1 1 1</Ambient>
+		<Diffuse>0.5 0.5 0.5</Diffuse>
+		<Specular>1 1 1 125</Specular>
+		<Reflectance>0 0 0</Reflectance>
+	</Material>
+
+	<Vertex id=1>
+		<Coordinates>-10 -10 10</Coordinates>
+	</Vertex>
+	<Vertex id=2>
+		<Coordinates>10 -10 10</Coordinates>
+	</Vertex>
+	<Vertex id=3>
+		<Coordinates>10 10 10</Coordinates>
+	</Vertex>
+	<Vertex id=4>
+		<Coordinates>-10 10 10</Coordinates>
+	</Vertex>
+	<Vertex id=5>
+		<Coordinates>-10 -10 -10</Coordinates>
+	</Vertex>
+	<Vertex id=6>
+		<Coordinates>10 -10 -10</Coordinates>
+	</Vertex>
+	<Vertex id=7>
+		<Coordinates>10 10 -10</Coordinates>
+	</Vertex>
+	<Vertex id=8>
+		<Coordinates>-10 10 -10</Coordinates>
+	</Vertex>
+	<Vertex id=9>
+		<Coordinates>5 -6 1</Coordinates>
+	</Vertex>
+	<Vertex id=10>
+		<Coordinates>-5 -6 -5</Coordinates>
+	</Vertex>
+
+	<Triangle id=1>
+		<Vertices>1 2 6</Vertices>
+		<MaterialId>1</MaterialId>
+	</Triangle>
+	<Triangle id=2>
+		<Vertices>6 5 1</Vertices>
+		<MaterialId>1</MaterialId>
+	</Triangle>
+
+	<Triangle id=3>
+		<Vertices>5 6 7</Vertices>
+		<MaterialId>1</MaterialId>
+	</Triangle>
+	<Triangle id=4>
+		<Vertices>7 8 5</Vertices>
+		<MaterialId>1</MaterialId>
+	</Triangle>
+
+	<Triangle id=5>
+		<Vertices>7 3 4</Vertices>
+		<MaterialId>1</MaterialId>
+	</Triangle>
+	<Triangle id=6>
+		<Vertices>4 8 7</Vertices>
+		<MaterialId>1</MaterialId>
+	</Triangle>
+
+	<Triangle id=7>
+		<Vertices>8 4 1</Vertices>
+		<MaterialId>2</MaterialId>
+	</Triangle>
+	<Triangle id=8>
+		<Vertices>8 1 5</Vertices>
+		<MaterialId>2</MaterialId>
+	</Triangle>
+
+	<Triangle id=9>
+		<Vertices>2 3 7</Vertices>
+		<MaterialId>3</MaterialId>
+	</Triangle>
+	<Triangle id=10>
+		<Vertices>2 7 6</Vertices>
+		<MaterialId>3</MaterialId>
+	</Triangle>
+
+	<Sphere id=1>
+		<Center>9</Center>
+		<Radius>4</Radius>
+		<MaterialId>4</MaterialId>
+	</Sphere>
+	<Sphere id=2>
+		<Center>10</Center>
+		<Radius>4</Radius>
+		<MaterialId>5</MaterialId>
+	</Sphere>
+
+
+	<PointLight id=1>
+		<Position>0 4 2</Position>
+		<Intensity>200000 200000 200000</Intensity>
+	</PointLight>
+	<AmbientLight>12.5 12.5 12.5</AmbientLight>
+	<BackgroundColor>0 0 0</BackgroundColor>
+	<RayReflectionCount>6</RayReflectionCount>
+	<Camera id=1>
+		<Position>0 0 20</Position>
+		<Gaze>0 0 -1</Gaze>
+		<Up>0 1 0</Up>
+		<ImagePlane>-10 10 -10 10 10 1024 1024</ImagePlane>
+		<OutputName>cornellbox_front.ppm</OutputName>
+	</Camera>
+	<Camera id=2>
+		<Position>0 0 20</Position>
+		<Gaze>0 0 -1</Gaze>
+		<Up>0 -1 0</Up>
+		<ImagePlane>-10 10 -10 10 10 1024 1024</ImagePlane>
+		<OutputName>cornellbox_inverse.ppm</OutputName>
+	</Camera>
+	<Camera id=3>
+		<Position>0 10 0</Position>
+		<Gaze>0 -1 0</Gaze>
+		<Up>0 0 -1</Up>
+		<ImagePlane>-10 10 -10 10 10 1024 1024</ImagePlane>
+		<OutputName>cornellbox_top.ppm</OutputName>
+	</Camera>
+</Scene>
